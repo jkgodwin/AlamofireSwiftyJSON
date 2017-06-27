@@ -11,6 +11,8 @@
 		1773A1001C5CD83B007039AB /* AlamofireSwiftyJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 1773A0F71C5CD76E007039AB /* AlamofireSwiftyJSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1773A1011C5CD843007039AB /* AlamofireSwiftyJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1773A0FC1C5CD80E007039AB /* AlamofireSwiftyJSONTests.swift */; };
 		1773A1051C5CDB55007039AB /* AlamofireSwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1773A1041C5CDB55007039AB /* AlamofireSwiftyJSON.swift */; };
+		AEEEDD611F02A586002418FE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEEEDD601F02A586002418FE /* Alamofire.framework */; };
+		AEEEDD631F02A589002418FE /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEEEDD621F02A589002418FE /* SwiftyJSON.framework */; };
 		D0C479C01CEC16EF00CD01FD /* AlamofireSwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C479AF1CEC169400CD01FD /* AlamofireSwiftyJSON.framework */; };
 		D0C479E91CEC173D00CD01FD /* AlamofireSwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C479D81CEC172600CD01FD /* AlamofireSwiftyJSON.framework */; };
 		D0C479F21CEC17FE00CD01FD /* AlamofireSwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1773A1041C5CDB55007039AB /* AlamofireSwiftyJSON.swift */; };
@@ -53,6 +55,8 @@
 		1773A0F71C5CD76E007039AB /* AlamofireSwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlamofireSwiftyJSON.h; sourceTree = "<group>"; };
 		1773A0FC1C5CD80E007039AB /* AlamofireSwiftyJSONTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireSwiftyJSONTests.swift; sourceTree = "<group>"; };
 		1773A1041C5CDB55007039AB /* AlamofireSwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireSwiftyJSON.swift; sourceTree = "<group>"; };
+		AEEEDD601F02A586002418FE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		AEEEDD621F02A589002418FE /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		D0C479AF1CEC169400CD01FD /* AlamofireSwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlamofireSwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C479BB1CEC16EF00CD01FD /* AlamofireSwiftyJSON macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AlamofireSwiftyJSON macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C479CB1CEC170A00CD01FD /* AlamofireSwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlamofireSwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEEEDD611F02A586002418FE /* Alamofire.framework in Frameworks */,
+				AEEEDD631F02A589002418FE /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +135,7 @@
 				1773A0F61C5CD76E007039AB /* Source */,
 				1773A0FB1C5CD80E007039AB /* Tests */,
 				1773A0DD1C5CD700007039AB /* Products */,
+				AEEEDD5F1F02A586002418FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -163,6 +170,15 @@
 				1773A0FC1C5CD80E007039AB /* AlamofireSwiftyJSONTests.swift */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		AEEEDD5F1F02A586002418FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AEEEDD621F02A589002418FE /* SwiftyJSON.framework */,
+				AEEEDD601F02A586002418FE /* Alamofire.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D0C479FE1CEC2EC000CD01FD /* Supporting Files */ = {
@@ -476,14 +492,12 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n/usr/local/bin/carthage copy-frameworks";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		1773A1031C5CD8C1007039AB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
